@@ -1,0 +1,9 @@
+body{
+    background-color: yellow;
+}
+#special{
+color:red;
+}
+.completed{
+    text-decoration:line-through;
+}

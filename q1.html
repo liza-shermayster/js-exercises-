@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <button id="btn-0">Button 1</button>
+    <button id="btn-1">Button 2</button>
+    <button id="btn-2">Button 3</button>
+
+    <script type="text/javascript">
+        const prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+        console.log('start of loop');
+
+        for (let btnNum = 0; btnNum < prizes.length; btnNum++) {
+            const btnEl = document.getElementById(`btn-${btnNum}`);
+            debugger
+            console.log('btnEl', btnEl);
+
+            // For each of our buttons, when the user clicks it...
+            btnEl.onclick = () => {
+                const msg = prizes[btnNum];
+                debugger;
+                // Tell her what she's won!
+                alert(msg);
+            };
+        }
+        console.log('end of loop');
+    </script>
+
+</body>
+
+</html>
