@@ -47,7 +47,7 @@ console.log(newArr1);
 console.log(newArr);
 
 
-
+//----------------------------
 
 
 
@@ -72,3 +72,32 @@ for (let i = 0; i < suspects.length; i++) {
 }
 
 console.log(test);
+
+//----------------------
+
+let createObj = function (arr) {
+    console.log(arr);
+
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        console.log(element);
+
+        b.push({
+            name: element,
+            color: element.split(' ')[1]
+        })
+
+    };
+    return b;
+
+}
+
+let a = ['miss scarlet', 'colonel mustard', 'mr white'];
+let b = [];
+
+let _ = { each: function () { } }
+_.each(createObj(a));
+console.log(b);
+console.log(_.each(a, createObj(a)));
+
+
