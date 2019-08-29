@@ -1,39 +1,28 @@
-function CreateSuspectObjects(name) {
-    return {
-        name: name,
-        color: name.split('')[1],
-        speak() {
-            console.log('my name is ', name);
+let _ = {};
 
-        }
-    };
-};
+var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
+function each(arr) {
+    let ar = []
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        console.log(element);
 
-var suspect = ['miss scarlet', 'colonel mustard', 'mr white'];
-var suspectList = [];
+        ar.push({
+            name: element,
+            color: element.split(' ')[1],
 
-var _ = {};
+        })
+    }
+    console.log('ar', ar);
 
-_.each = (suspect, function (name) {
-    let suspectObj = CreateSuspectObjects(name);
-    suspectList.push(suspsectObj);
-})
+    return ar;
+}
+console.log(each(suspects));
 
-_.each(['observatory', 'ballroom', 'library'],
-    function (value, index, list) {
-        console.log(value);
-        console.log(index);
-    })
+console.log(each(['a b', 'c d']));
 
+console.log(_[each]);
 
-
-
-
-['observatory', 'ballroom', 'library'].forEach(function (value, index, list) {
-    console.log(value);
-    console.log(index);
-    console.log(list);
-});
 
 
 
@@ -56,3 +45,30 @@ arr.forEach(
 console.log(newArr1);
 
 console.log(newArr);
+
+
+
+
+
+
+var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
+
+var suspectsList = [];
+
+x = function CreateList(param) {
+    console.log(param);
+
+    return {
+        name: param
+    }
+
+}
+    ;
+console.log(x(suspects));
+let test = [];
+
+for (let i = 0; i < suspects.length; i++) {
+    test.push(x(suspects[i]))
+}
+
+console.log(test);
