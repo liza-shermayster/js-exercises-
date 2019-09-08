@@ -73,21 +73,18 @@ const videoData = [
     }
 ];
 
-let filterFun = function (item) {
-    if (item === true) {
-        return item;
-    }
-    return;
-}
+const filterFun = (item) => item.present;
+
 
 let _ = {
     filter: (arr, fun) => {
         let newFilterArr = []
         for (let i = 0; i < arr.length; i++) {
-            console.log(arr[i].present);
-            newItem = fun(arr[i].present)
-            if (newItem) {
-                newFilterArr.push(arr[i].name)
+            const result = fun(arr[i])
+            console.log(result);
+
+            if (result) {
+                newFilterArr.push(arr[i])
             }
 
         }
